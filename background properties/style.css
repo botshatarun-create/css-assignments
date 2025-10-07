@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    width: 270px;
+    height: 400px;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Make text invisible on hover */
+.card:hover p,
+.card:hover button {
+    opacity: 0;
+}
+
+.card p {
+    color: white;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-size: 16px;
+    line-height: 1.5;
+    transition: opacity 0.3s ease; /* Add transition */
+}
+
+.card button {
+    background: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Changed to all for multiple properties */
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 1; /* Ensure it's visible by default */
+}
+
+.card button:hover {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    opacity: 1; /* Keep button visible when hovering over button itself */
+}
+
+
+/* Card colors and images */
+.card-1 { background:#FF6D6D; }
+.card-1::before { background: url('../images/84811293a59a67cc8d65744bf17d8eb1.jpg'); 
+background-size: cover;}
+
+.card-2 { background:#FFD580; }
+.card-2::before { background: url('../images/56d37f638e723c543a11fd5332e0da48.jpg');
+background-size: cover }
+
+.card-3 { background:#4A2C2C; }
+.card-3::before { background: url('../images/644594133ad9401d23e06b4204b9fd3e.jpg');
+background-size: cover }
+
+.card-4 { background:#558B6E; }
+.card-4::before { background: url('../images/40b7debf97d7516490531ef251888317.jpg'); 
+background-size: cover}
+
+.card-5 { background:#9CB48B; }
+.card-5::before { background: url('../images/cc1d5bc7522baf09cc0dcf42beb6f773.jpg');
+background-size: cover }
+
+.card-6 { background:#9D4EDD; }
+.card-6::before { background: url('../images/767441810438495f923f4343a8034fa3.jpg');
+background-size: cover }
+
+.card-7 { background:#FF6B9D; }
+.card-7::before { background: url('../images/abbddf2730b163c48bf48a41180cbc37.jpg');
+background-size: cover }
+
+.card-8 { background:#4BB5D5; }
+.card-8::before { background: url('../images/734ac9d75f0ff815c4f07cfc5daf3473.jpg');
+background-size: cover }
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
