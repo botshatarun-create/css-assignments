@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Specifications Table</title>
+    <style>
+        /* Basic CSS for clear table display and colors */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+        table {
+            width: 70%; /* Adjust as needed */
+            margin: 20px auto;
+        }
+        /* Styling for the main header row (Device, Brand, Specifications) */
+        .main-header {
+            background-color: #00cccc; /* Teal/Cyan color */
+            color: black; /* Text color */
+        }
+        /* Styling for the sub-header row (Model, Storage) */
+        .sub-header {
+            background-color: #ffcc00; /* Yellow/Orange color */
+            color: black; /* Text color */
+        }
+        /* Styling for the 'Specifications' cell which spans two columns */
+        #specifications-th {
+            background-color: #00cccc; /* Teal/Cyan color */
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr class="main-header">
+        <th rowspan="2">Device</th>
+        <th rowspan="2">Brand</th>
+        <th id="specifications-th" colspan="2">Specifications</th>
+    </tr>
+
+    <tr class="sub-header">
+        <th>Model</th>
+        <th>Storage</th>
+    </tr>
+
+    <tr>
+        <td rowspan="2">Smartphone</td>
+        <td rowspan="2">Apple</td>
+        <td>iPhone 12 Pro</td>
+        <td>256GB</td>
+    </tr>
+
+    <tr>
+        <td>iPhone SE</td>
+        <td>128GB</td>
+    </tr>
+
+    <tr>
+        <td>Laptop</td>
+        <td>HP</td>
+        <td colspan="2">15.6" Display</td>
+    </tr>
+
+    <tr>
+        <td>Tablet</td>
+        <td>Samsung</td>
+        <td colspan="2">10.5" Display</td>
+    </tr>
+</table>
+
+</body>
+</html>
