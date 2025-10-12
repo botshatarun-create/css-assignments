@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Time Table</title>
+    <style>
+        /* Basic CSS for a clean, bordered table */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+        table {
+            width: 90%; /* Adjust as needed */
+            margin: 20px auto;
+        }
+        /* Styling for the header periods */
+        .period-header {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .table-title {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="table-title">TIME TABLE</div>
+
+<table>
+    <tr class="period-header">
+        <th>Day/Period</th>
+        <th>I<br>9:30-<br>10:20</th>
+        <th>II<br>10:20-<br>11:10</th>
+        <th>III<br>11:10-<br>12:00</th>
+        <th>IV<br>12:00-<br>12:40</th>
+        <th>V<br>12:40-<br>1:30</th>
+        <th>VI<br>1:30-<br>2:20</th>
+        <th>VII<br>2:20-<br>3:10</th>
+        <th>VIII<br>3:10-<br>4:00</th>
+    </tr>
+
+    <tr>
+        <td>Monday</td>
+        <td>Eng</td>
+        <td>Mat</td>
+        <td>Che</td>
+        <td colspan="2">LAB</td>
+        <td></td>
+        <td></td>
+        <td>Phy</td>
+    </tr>
+
+    <tr>
+        <td>Tuesday</td>
+        <td colspan="3">LAB</td>
+        <td></td>
+        <td>Eng</td>
+        <td>Che</td>
+        <td>Mat</td>
+        <td>SPORTS</td>
+    </tr>
+
+    <tr>
+        <td>Wednesday</td>
+        <td>Mat</td>
+        <td>Phy</td>
+        <td>Eng</td>
+        <td>LUNCH</td>
+        <td>Che</td>
+        <td colspan="2">LIBRARY</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>Thursday</td>
+        <td>Phy</td>
+        <td>Eng</td>
+        <td>Che</td>
+        <td></td>
+        <td colspan="3">LAB</td>
+        <td>Mat</td>
+    </tr>
+
+    <tr>
+        <td>Friday</td>
+        <td>Phy</td>
+        <td>Eng</td>
+        <td>Che</td>
+        <td></td>
+        <td colspan="3">LAB</td>
+        <td>Mat</td>
+    </tr>
+</table>
+
+</body>
+</html>
