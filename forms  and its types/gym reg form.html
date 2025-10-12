@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gym Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .gym-form {
+            width: 600px;
+            margin: 40px auto;
+            background: #f7f7f7;
+            padding: 22px 22px 12px 22px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #bbb;
+        }
+        .gym-form h2 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+        .row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .row > div {
+            flex: 1;
+        }
+        .gym-form input[type=text], 
+        .gym-form input[type=email],
+        .gym-form input[type=number] {
+            width: 100%;
+            padding: 7px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 2px;
+        }
+        .gym-form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 2px;
+            margin-bottom: 10px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .check-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .check-col {
+            width: 48%;
+        }
+        .submit-btn {
+            width: 100%;
+            background: #299a2c;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+        label {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gym-form">
+        <h2>Gym Registration Form</h2>
+        <form>
+            <div class="row">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" name="name" />
+                </div>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male"> MALE</label>
+                    <label><input type="radio" name="gender" value="female"> FEMALE</label>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label>Email:</label>
+                    <input type="email" name="email" />
+                </div>
+                <div>
+                    <label>Phone:</label>
+                    <input type="text" name="phone" />
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label>Your current weight (lbs):</label>
+                    <input type="number" name="current_weight" />
+                </div>
+                <div>
+                    <label>Desired weight (lbs):</label>
+                    <input type="number" name="desired_weight" />
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label>Height:</label>
+                    <input type="number" name="height" />
+                </div>
+                <div>
+                    <label>BMI:</label>
+                    <input type="number" name="bmi" />
+                </div>
+            </div>
+            <label>Address:</label>
+            <textarea name="address" rows="2"></textarea>
+            <div class="row">
+                <div>
+                    <label>City:</label>
+                    <input type="text" name="city" />
+                </div>
+                <div>
+                    <label>State:</label>
+                    <input type="text" name="state" />
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label>Zip Code:</label>
+                    <input type="text" name="zipcode" />
+                </div>
+                <div>
+                    <label>Country:</label>
+                    <input type="text" name="country" />
+                </div>
+            </div>
+            <div class="check-row">
+                <div class="check-col">
+                    <label>Do you require a personal trainer?</label><br>
+                    <input type="radio" name="trainer" value="Yes" /> Yes<br>
+                    <input type="radio" name="trainer" value="No" /> No
+                </div>
+                <div class="check-col">
+                    <label>Have you been in a Gym before?</label><br>
+                    <input type="radio" name="previous_gym" value="Yes" /> Yes<br>
+                    <input type="radio" name="previous_gym" value="No" /> No
+                </div>
+            </div>
+            <button class="submit-btn" type="submit">Apply</button>
+        </form>
+    </div>
+</body>
+</html>
