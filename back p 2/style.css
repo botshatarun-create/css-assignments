@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f1f1f1;
+  padding: 40px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card base */
+.card {
+  height: 200px;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+}
+
+/* Different colors */
+.card1 { background: #e74c3c; }
+.card2 { background: #3498db; }
+.card3 { background: #2ecc71; }
+.card4 { background: #9b59b6; }
+.card5 { background: #e67e22; }
+.card6 { background: #1abc9c; }
+.card7 { background: #f1c40f; color: #000; }
+.card8 { background: #34495e; }
+
+/* Card hover → color change */
+.card1:hover { background: #c0392b; }
+.card2:hover { background: #2980b9; }
+.card3:hover { background: #27ae60; }
+.card4:hover { background: #8e44ad; }
+.card5:hover { background: #d35400; }
+.card6:hover { background: #16a085; }
+.card7:hover { background: #f39c12; }
+.card8:hover { background: #2c3e50; }
+
+/* Button */
+.card button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Button hover → gradient */
+.card button:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
